@@ -20,10 +20,5 @@ var app = app || {};
     }
     return module.taskTemplate(data);
   }
-  module.Book = function Book(ObjLiteral) {
-      Object.keys(ObjLiteral).forEach(key => this[key] = ObjLiteral[key]);
-    }
-  
-  Book.all = [];
 })(app);
 

@@ -1,4 +1,4 @@
-var app = app || {}
+var app = app || {};
 
 (function(module) {
 
@@ -6,7 +6,7 @@ var app = app || {}
   let developmentApiUrl = 'http://localhost:3000';
 
   module.isProduction = /^(?!localhost|127)/.test(window.location.hostname);
-  
+
   module.ENVIRONMENT = {
     apiUrl: module.isProduction ? productionApiUrl : developmentApiUrl
   };

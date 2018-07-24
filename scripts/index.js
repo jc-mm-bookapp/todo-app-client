@@ -10,5 +10,20 @@ var app = app || {};
   module.ENVIRONMENT = {
     apiUrl: module.isProduction ? productionApiUrl : developmentApiUrl
   };
+  module.showOnly = (selector) => {
+    $('#bookDisplay').hide();
+    $(selector).show();
+  }
+  module.render = (templateId, data) => {
+    if(!module.taskTemplate) {
+      module.taskTemplate = Handlebars.compile($(`#${templateId}`).text());
+    }
+    return module.taskTemplate(data);
+  }
+  module.Book = function Book(ObjLiteral) {
+      Object.keys(ObjLiteral).forEach(key => this[key] = ObjLiteral[key]);
+    }
+  
+  Book.all = [];
 })(app);
 

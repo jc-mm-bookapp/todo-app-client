@@ -1,6 +1,6 @@
 var app = app || {};
 
-(function(module) {
+(function(module){
 
   let productionApiUrl = 'https://mm-jc-todo-app-server.herokuapp.com/';
   let developmentApiUrl = 'http://localhost:3000';

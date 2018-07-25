@@ -3,8 +3,10 @@ app = app || {};
 
 (function(module){
 
+  //max -- this is the constructor function that is making the book objects in the client side
   function Book(ObjLiteral) { Object.keys(ObjLiteral).forEach(key => this[key] = ObjLiteral[key]);}
 
+  //max -- this a
   Book.prototype.toHtml = function() {
     return app.render("#book-list-template", this);
   }

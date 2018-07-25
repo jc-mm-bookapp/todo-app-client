@@ -3,7 +3,7 @@ app = app || {};
 
 (function(module){
 
-  function errCallback(error){
+  function errorCallback(error){
     console.error(error);
     app.errorView.initErrorPage(error);
   }

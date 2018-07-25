@@ -3,7 +3,7 @@ app = app || {};
 
 (function(module){
 
-  function errCallback(error){
+  function errorCallback(error){
     console.error(error);
     app.errorView.initErrorPage(error);
   }
@@ -23,7 +23,7 @@ app = app || {};
 
   //max - this is the actual function that is interacting with the controller, as it is finding the books table, recieving the response for that function from the controller, and putting that response as an argument in loadAll
   Book.fetchAll = callback =>{
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
+    $.get(`${app.ENVIRONMENT.apiUrl}api/v1/books`)
       .then(Book.loadAll)
       .then(callback)
       .catch(errorCallback);

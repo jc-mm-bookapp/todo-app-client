@@ -4,7 +4,7 @@ var app = app || {};
 
 (function(module){
 
-  let productionApiUrl = 'https://mm-jc-todo-app-server.herokuapp.com/';
+  let productionApiUrl = 'https://bookapp-mm-jc.herokuapp.com';
   let developmentApiUrl = 'http://localhost:3000';
 
   module.isProduction = /^(?!localhost|127)/.test(window.location.hostname);

@@ -11,7 +11,7 @@ var app = app || {};
     apiUrl: module.isProduction ? productionApiUrl : developmentApiUrl
   };
   module.showOnly = (selector) => {
-    $('#bookDisplay').hide();
+    $('#book-display').hide();
     $(selector).show();
   }
   module.render = (templateId, data) => {

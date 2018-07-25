@@ -13,6 +13,11 @@
     <title>The Test Page</title>
 
     <script id="book-list-template" type="text/x-handlebars-template">
+      <li class="book-list">
+          <h4>Title: {{title}}</h4>
+          <p>Author: {{author}}</p>
+          <img src={{image_url}}>
+        </li>
     </script>
 
     <script id="error-template" type="text/x-handlebars-template">

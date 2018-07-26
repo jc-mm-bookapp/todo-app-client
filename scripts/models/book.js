@@ -29,6 +29,26 @@ app = app || {};
       .catch(errorCallback);
   }
 
+  //--------------------------------------------------------------
+  //--------------------------------------------------------------
+
+
+  Book.getIndividual = (callback, bookId) =>{
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${bookId}`)
+      .then()
+      .then()
+      .catch(errorCallback);
+  }
+
+  Book.createNew = callback =>{
+    $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
+      .then(Book.loadAll)
+      .then(callback)
+      .catch(errorCallback);
+  }
+  //--------------------------------------------------------------
+  //--------------------------------------------------------------
+
   //max - this gives the object made (Book) the pretense of app, as this entire file is wrapped in an iife statement
 module.Book = Book;
 

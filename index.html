@@ -13,13 +13,17 @@
     <title>The Test Page</title>
 
     <script id="book-list-template" type="text/x-handlebars-template">
-      <div class="book-container">
-        <li class="book-list">
-            <img src={{image_url}}>
-            <h4>Title: {{title}}</h4>
-            <p>Author: {{author}}</p>
-        </li>
-      </div>
+
+      <li class="book-list">
+        <div class="spacer">
+          <img src={{image_url}}>
+          <div class="book-info">
+            <h4 class="h4-title">Title: {{title}}</h4>
+            <p class="p-author">Author: {{author}}</p>
+          </div>  
+        </div>
+      </li>
+
     </script>
 
     <script id="error-template" type="text/x-handlebars-template">
@@ -46,11 +50,12 @@
   <main>
 
     <section class="error-view container">
-      <h3>Something went wrong</h3>
+      <h3>Will it work?</h3>
       <section id="error-message"></section>
     </section>
-
-    <section id="book-display">
+    
+    <section >
+      <ul id="book-display"></ul>
 
     </section>
 

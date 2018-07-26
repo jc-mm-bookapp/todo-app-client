@@ -33,19 +33,19 @@ app = app || {};
   //--------------------------------------------------------------
 
 
-  Book.fetchOne = (callback, bookId) =>{
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${bookId}`)
-      .then()
-      .then()
-      .catch(errorCallback);
-  }
+  // Book.fetchOne = (callback, bookId) =>{
+  //   $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${bookId}`)
+  //     .then()
+  //     .then()
+  //     .catch(errorCallback);
+  // }
 
-  Book.createNew = callback =>{
-    $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
-      .then(Book.loadAll)
-      .then(callback)
-      .catch(errorCallback);
-  }
+  // Book.createNew = callback =>{
+  //   $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
+  //     .then(Book.loadAll)
+  //     .then(callback)
+  //     .catch(errorCallback);
+  // }
   //--------------------------------------------------------------
   //--------------------------------------------------------------
 

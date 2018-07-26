@@ -1,3 +1,9 @@
 * {
-  background-color: lightgreen;
+  text-align: center;
+  background-color: lightgrey;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
 }

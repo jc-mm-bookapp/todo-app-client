@@ -8,7 +8,13 @@ var app = app || {};
   bookView.initIndexPage = () => {
     $('.containter').children().hide();
     app.showOnly('#book-display');
-    module.Book.all.map(book => $('#book-display').append(book.toHtml()));
+    module.Book.all.map(book => $('#book-display').append(book.toHtml('book-list-template')));
+  }
+  bookView.showSingleBook = (context) =>{
+    $('.containter').children().hide();
+    app.showOnly('#single-book-display');
+    let selectedBook = module.Book.all.filter(book => book.book_id === parseInt(context.params.id));
+    $('#single-book-display').append(selectedBook[0].toHtml('single-book-template'));
   }
 
 

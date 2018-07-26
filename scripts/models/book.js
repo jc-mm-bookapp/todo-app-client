@@ -12,8 +12,8 @@ app = app || {};
   function Book(ObjLiteral) { Object.keys(ObjLiteral).forEach(key => this[key] = ObjLiteral[key]);}
 
   //max -- this a prototype function that allows a book object to be rendered in the html.
-  Book.prototype.toHtml = function() {
-    return app.render("book-list-template", this);
+  Book.prototype.toHtml = function(templateId) {
+    return app.render(templateId, this);
   }
   
   Book.all = [];
@@ -29,23 +29,25 @@ app = app || {};
       .catch(errorCallback);
   }
 
+
   //--------------------------------------------------------------
   //--------------------------------------------------------------
 
+  // Book.loadOne = singleBook => 
+  // Book.createOne =  
 
-  // Book.fetchOne = (callback, bookId) =>{
-  //   $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${bookId}`)
-  //     .then()
-  //     .then()
-  //     .catch(errorCallback);
-  // }
+  Book.fetchOne = (callback) =>{
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/:id`)
+      .then(callBack)
+      .catch(errorCallback);
+  }
 
-  // Book.createNew = callback =>{
-  //   $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
-  //     .then(Book.loadAll)
-  //     .then(callback)
-  //     .catch(errorCallback);
-  // }
+  Book.createNew = callback =>{
+    $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
+      .then(Book.loadAll)
+      .then(callback)
+      .catch(errorCallback);
+  }
   //--------------------------------------------------------------
   //--------------------------------------------------------------
 

@@ -13,7 +13,7 @@ var app = app || {};
     apiUrl: module.isProduction ? productionApiUrl : developmentApiUrl
   };
   module.showOnly = (selector) => {
-    $('#book-display').hide();
+    $('.hide-all').hide();
     $(selector).show();
   }
   module.render = (templateId, data) => {

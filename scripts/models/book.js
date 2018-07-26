@@ -33,7 +33,7 @@ app = app || {};
   //--------------------------------------------------------------
 
 
-  Book.getIndividual = (callback, bookId) =>{
+  Book.fetchOne = (callback, bookId) =>{
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${bookId}`)
       .then()
       .then()

@@ -18,10 +18,10 @@ app = app || {};
   
   Book.all = [];
 
-  //max - this takes all of the rows obtained from the SQL backend, sorts them by title, and makes them into book objects in the front end
+  //max - this takes all of the rows obtained from the SQL back-end, sorts them by title, and makes them into book objects in the front end
   Book.loadAll = rows => Book.all = rows.map(book => new Book(book));
 
-  //max - this is the actual function that is interacting with the controller, as it is finding the books table, recieving the response for that function from the controller, and putting that response as an argument in loadAll
+  //max - this is the actual function that is interacting with the controller, as it is finding the books table, receiving the response for that function from the controller, and putting that response as an argument in loadAll
   Book.fetchAll = callback =>{
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
       .then(Book.loadAll)

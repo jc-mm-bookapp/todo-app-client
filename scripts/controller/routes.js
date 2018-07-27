@@ -4,7 +4,7 @@
 // FRONT-END ROUTES
 // --------------------------------------------
 page('/', ctx => app.bookView.initIndexPage());
-// page('/about',app.aboutView.init);
+page('/about',ctx => app.aboutView.initAboutPage());
 // page('/contact',contactView.init);
 page('/books/:id', ctx => app.Book.fetchOne(ctx, app.bookView.showSingleBook));
 // --------------------------------------------

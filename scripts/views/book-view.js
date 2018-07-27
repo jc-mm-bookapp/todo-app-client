@@ -15,8 +15,8 @@ var app = app || {};
     $('.containter').children().hide();
     $('#single-book-display').empty();
     app.showOnly('#single-book-display');
-    // let selectedBook = module.Book.all.filter(book => book.book_id === parseInt(context.params.id));
-    $('#single-book-display').append(app.render( 'single-book-template', context));
+    let selectedBook = module.Book.all.filter(book => book.book_id === parseInt(context.params.id));
+    $('#single-book-display').append(selectedBook[0].toHtml('single-book-template'));
   }
 
 

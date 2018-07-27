@@ -40,7 +40,7 @@ app = app || {};
   Book.fetchOne = (context, callback) =>{
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${context.params.id}`)
       // .then(result => context.book = result[0])
-      .then(callback)
+      .then(callback(context))
       .catch(errorCallback);
   }
 

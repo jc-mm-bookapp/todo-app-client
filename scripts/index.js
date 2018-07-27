@@ -17,9 +17,7 @@ var app = app || {};
     $(selector).show();
   }
   module.render = (templateId, data) => {
-    if(!module.taskTemplate) {
-      module.taskTemplate = Handlebars.compile($(`#${templateId}`).text());
-    }
+    module.taskTemplate = Handlebars.compile($(`#${templateId}`).text());
     return module.taskTemplate(data);
   }
 })(app);

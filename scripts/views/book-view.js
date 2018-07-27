@@ -6,13 +6,13 @@ var app = app || {};
   const bookView = {};
 
   bookView.initIndexPage = () => {
-    $('.containter').children().hide();
+    $('.container').children().hide();
     $('#book-display').empty();
     app.showOnly('#book-display');
     module.Book.all.map(book => $('#book-display').append(book.toHtml('book-list-template')));
   }
   bookView.showSingleBook = (context) =>{
-    $('.containter').children().hide();
+    $('.container').children().hide();
     $('#single-book-display').empty();
     app.showOnly('#single-book-display');
     let selectedBook = module.Book.all.filter(book => book.book_id === parseInt(context.params.id));

@@ -3,10 +3,10 @@
 // --------------------------------------------
 // FRONT-END ROUTES
 // --------------------------------------------
-page('/',app.bookView.initIndexPage);
-// page('/about',aboutView.init);
+page('/', ctx => app.bookView.initIndexPage());
+// page('/about',app.aboutView.init);
 // page('/contact',contactView.init);
-page('/books/:id',app.bookView.showSingleBook);
+page('/books/:id', ctx => app.Book.fetchOne(ctx, app.bookView.showSingleBook));
 // --------------------------------------------
 
 // Vinicio - this line has to be placed at the end of the file, AFTER you define any front-end routes

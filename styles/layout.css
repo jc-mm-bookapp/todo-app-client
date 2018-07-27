@@ -7,26 +7,42 @@
   padding: 0px;
 }
 
+
 img {
   border-style: none;
   position: relative;
   display: block;
   margin: auto;
-  width: 100%;
+  width: inherit;
   height: 400px;
+  padding-top: 10px;
+  background-color: #9b9b9b;
 }
 
 .spacer {
   height: 60%;
   position: relative;
+  background-color: #9b9b9b;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-bottom: solid black;
 }
 .book-info {
   position: absolute;
   bottom: 0;
   width: 100%;
+  margin: auto;
+  background-color: grey;
+  height: 80px;
+}
+.book-info > *{
+  margin: 0%;
+  background-color: grey;
+  padding: 3px;
 }
 
-h4.h4-title {
+
+/* h4.h4-title {
   margin: 0%;
   background-color: grey;
 }
@@ -34,7 +50,7 @@ h4.h4-title {
 p.p-author {
   margin: 0%;
   background-color: grey;
-}
+} */
 
 @media (min-width:600px){
   img {

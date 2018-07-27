@@ -24,6 +24,7 @@ app = app || {};
   //max - this is the actual function that is interacting with the controller, as it is finding the books table, recieving the response for that function from the controller, and putting that response as an argument in loadAll
   Book.fetchAll = callback =>{
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
+      .then($('#book-display').empty())
       .then(Book.loadAll)
       .then(callback)
       .catch(errorCallback);
@@ -36,9 +37,10 @@ app = app || {};
   // Book.loadOne = singleBook => 
   // Book.createOne =  
 
-  Book.fetchOne = (callback) =>{
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/:id`)
-      .then(callBack)
+  Book.fetchOne = (context, callback) =>{
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${context.params.id}`)
+      // .then(result => context.book = result[0])
+      .then(callback)
       .catch(errorCallback);
   }
 

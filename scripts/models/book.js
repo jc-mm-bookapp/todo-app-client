@@ -44,10 +44,10 @@ app = app || {};
       .catch(errorCallback);
   }
 
-  Book.createNew = callback =>{
-    $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
-      .then(Book.loadAll)
-      .then(callback)
+  Book.createNew = function(book){
+    console.log(book);
+    $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`, book)
+    .then(app.Book.fetchAll(app.bookView.initIndexPage))
       .catch(errorCallback);
   }
   //--------------------------------------------------------------

@@ -6,7 +6,9 @@
 page('/', ctx => app.bookView.initIndexPage());
 // page('/about',app.aboutView.init);
 // page('/contact',contactView.init);
+page('/new', ctx => app.formView.initFormPage(ctx));
 page('/books/:id', ctx => app.Book.fetchOne(ctx, app.bookView.showSingleBook));
+page('todo-app-client/books/:id', ctx => app.Book.fetchOne(ctx, app.bookView.showSingleBook));
 // --------------------------------------------
 
 // Vinicio - this line has to be placed at the end of the file, AFTER you define any front-end routes

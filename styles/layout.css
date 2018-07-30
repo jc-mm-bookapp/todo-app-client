@@ -71,7 +71,17 @@ p.p-author {
   margin: 0%;
   background-color: grey;
 } */
-
+input , textarea{
+  display: block;
+  margin: 25px;
+  padding-right: 20px;
+}
+button{
+  background-color: black;
+  color: white;
+  border-radius: 15%;
+  padding: 20px;
+}
 @media (min-width:600px){
   img {
     border-style: none;

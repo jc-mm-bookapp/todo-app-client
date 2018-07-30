@@ -1,11 +1,14 @@
 'use strict'
 
-app = app || {};
+var app = app || {};
 
 (function(module){
-  aboutView = {};
-  
+  let aboutView = {};
 
+  aboutView.initAboutPage = (context) =>{
+    $('.container').children().hide();
+    app.showOnly('#about-display');
+  }
 
 
 

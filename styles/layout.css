@@ -6,7 +6,11 @@
   list-style-type: none;
   padding: 0px;
 }
-
+body {
+  background-color: lightgray;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
 
 img {
   border-style: none;
@@ -18,7 +22,23 @@ img {
   padding-top: 10px;
   background-color: #9b9b9b;
 }
+a{
+  text-decoration: none;
+ 
+}
+nav { 
+  background-color: black;
+  color: lightgray;
+  text-decoration: none;
 
+}
+a {
+  color: lightgray;
+}
+#web-title{
+  margin-top: 0;
+  padding-top: 30px;
+}
 .spacer {
   height: 60%;
   position: relative;
